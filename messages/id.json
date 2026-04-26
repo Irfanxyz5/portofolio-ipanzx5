@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang Saya",
+    "experience": "Pengalaman",
+    "portfolio": "Portfolio",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "greeting": "👋 Halo, Saya",
+    "name": "Ipanzx",
+    "role": "Full Stack & Web3 Developer",
+    "description": "Membangun solusi digital inovatif dengan teknologi web modern dan blockchain. Bersemangat dalam menciptakan aplikasi yang scalable, aman, dan user-friendly.",
+    "scroll": "Gulir ke Bawah"
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "description": "Pelajari lebih lanjut tentang perjalanan saya",
+    "content": {
+      "p1": "Halo! Saya <span class=\"text-ocean-400 font-semibold\">Ipanzx</span>, seorang Full Stack Developer dan antusias Web3 yang bersemangat dengan pengalaman lebih dari 10 tahun dalam membangun solusi digital inovatif.",
+      "p2": "Perjalanan saya di dunia teknologi dimulai dengan rasa ingin tahu tentang cara kerja situs web, dan telah berkembang menjadi keahlian mendalam dalam teknologi web modern, pengembangan blockchain, dan pembuatan aplikasi scalable yang memberikan dampak.",
+      "p3": "Saya berspesialisasi dalam membangun aplikasi full-stack menggunakan React, Next.js, Node.js, dan TypeScript. Saya juga terlibat mendalam dalam ruang Web3, bekerja dengan Solidity, smart contract, dan aplikasi terdesentralisasi (dApps).",
+      "p4": "Saat saya tidak sedang coding, Anda akan menemukan saya menjelajahi teknologi baru, berkontribusi pada proyek open-source, atau berbagi pengetahuan dengan komunitas pengembang melalui artikel teknis dan bimbingan."
+    },
+    "stats": {
+      "exp": "Tahun Pengalaman",
+      "projects": "Proyek Selesai",
+      "stacks": "Stack Teknologi",
+      "dedicated": "Berdedikasi"
+    },
+    "bubbles": {
+      "web": "Pengembang Web",
+      "blockchain": "Blockchain",
+      "fullstack": "Full Stack",
+      "web3": "Web3"
+    }
+  },
+  "experience": {
+    "title": "Pengalaman Saya",
+    "subtitle": "Perjalanan saya di dunia teknologi dan pendidikan",
+    "footer": "Terus Belajar & Berkembang",
+    "types": {
+      "work": "Kerja",
+      "education": "Pendidikan",
+      "course": "Kursus"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Jelajahi karya dan keahlian saya",
+    "techStack": "Stack Teknologi",
+    "projects": "Proyek Saya",
+    "certificates": "Sertifikat",
+    "projectCard": {
+      "featured": "Unggulan",
+      "code": "Kode",
+      "preview": "Pratinjau"
+    },
+    "certificateCard": {
+      "viewCredential": "Lihat Kredensial",
+      "preview": "Pratinjau Sertifikat",
+      "fullView": "Tampilan Lengkap Sertifikat"
+    }
+  },
+  "contact": {
+    "title": "Hubungi Saya",
+    "description": "Jangan ragu untuk menghubungi saya untuk kolaborasi atau sekadar mengobrol!",
+    "cta": {
+      "title": "Mari Bekerja Sama",
+      "description": "Punya proyek dalam pikiran? Mari diskusikan bagaimana kita bisa bekerja sama untuk menghidupkan ide-ide Anda.",
+      "button": "Kirim Pesan"
+    },
+    "footer": "© 2024 Ipanzx. Dibuat dengan Next.js, TypeScript & Three.js"
+  }
+}

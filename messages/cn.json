@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于我",
+    "experience": "经验",
+    "portfolio": "作品集",
+    "contact": "联系我"
+  },
+  "hero": {
+    "greeting": "👋 你好，我是",
+    "name": "Ipanzx",
+    "role": "全栈和Web3开发者",
+    "description": "使用现代网络技术和区块链构建创新的数字解决方案。热衷于创建可扩展、安全和用户友好的应用程序。",
+    "scroll": "向下滚动"
+  },
+  "about": {
+    "title": "关于我",
+    "description": "了解更多关于我的旅程",
+    "content": {
+      "p1": "你好！我是 <span class=\"text-ocean-400 font-semibold\">Ipanzx</span>，一位充满热情的全栈开发人员和 Web3 爱好者，在构建创新数字解决方案方面拥有超过 10 年의 经验。",
+      "p2": "我的技术之旅始于对网站如何运作的好奇，后来演变为对现代网络技术、区块链开发和创建具有影响力的可扩展应用程序的深厚专业知识。",
+      "p3": "我专注于使用 React、Next.js、Node.js 和 TypeScript 构建全栈应用程序。我也深入参与 Web3 领域，研究 Solidity、智能合约和去中心化应用程序 (dApps)。",
+      "p4": "当我不写代码时，你会发现我正在探索新技术、为开源项目做贡献，或者通过技术文章和指导与开发人员社区分享知识。"
+    },
+    "stats": {
+      "exp": "年经验",
+      "projects": "完成项目",
+      "stacks": "技术栈",
+      "dedicated": "专注"
+    },
+    "bubbles": {
+      "web": "Web开发",
+      "blockchain": "区块链",
+      "fullstack": "全栈",
+      "web3": "Web3"
+    }
+  },
+  "experience": {
+    "title": "我的经验",
+    "subtitle": "我的技术和教育之旅",
+    "footer": "不断学习与成长",
+    "types": {
+      "work": "工作",
+      "education": "教育",
+      "course": "课程"
+    }
+  },
+  "portfolio": {
+    "title": "作品集",
+    "subtitle": "探索我的作品和技能",
+    "techStack": "技术栈",
+    "projects": "我的项目",
+    "certificates": "证书",
+    "projectCard": {
+      "featured": "精选",
+      "code": "代码",
+      "preview": "预览"
+    },
+    "certificateCard": {
+      "viewCredential": "查看凭证",
+      "preview": "证书预览",
+      "fullView": "完整证书视图"
+    }
+  },
+  "contact": {
+    "title": "联系我",
+    "description": "欢迎随时联系我进行合作或友好聊天！",
+    "cta": {
+      "title": "让我们开始合作",
+      "description": "有什么想法吗？让我们讨论一下如何合作，将您的想法变为现实。",
+      "button": "发送消息"
+    },
+    "footer": "© 2024 Ipanzx. 使用 Next.js, TypeScript 和 Three.js 构建"
+  }
+}

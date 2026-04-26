@@ -4,15 +4,10 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
-interface AboutSectionProps {
-  translations: {
-    title: string;
-    description: string;
-  };
-}
-
-export default function AboutSection({ translations }: AboutSectionProps) {
+export default function AboutSection() {
+  const t = useTranslations('about');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -36,10 +31,10 @@ export default function AboutSection({ translations }: AboutSectionProps) {
   };
 
   const bubbles = [
-    { text: 'Web Developer', delay: 0, x: -20, y: -30 },
-    { text: 'Blockchain', delay: 0.2, x: 30, y: -50 },
-    { text: 'Full Stack', delay: 0.4, x: -30, y: 20 },
-    { text: 'Web3', delay: 0.6, x: 40, y: 40 },
+    { text: t('bubbles.web'), delay: 0, x: -20, y: -30 },
+    { text: t('bubbles.blockchain'), delay: 0.2, x: 30, y: -50 },
+    { text: t('bubbles.fullstack'), delay: 0.4, x: -30, y: 20 },
+    { text: t('bubbles.web3'), delay: 0.6, x: 40, y: 40 },
   ];
 
   return (
@@ -74,13 +69,6 @@ export default function AboutSection({ translations }: AboutSectionProps) {
                 {/* Photo Placeholder - Replace with actual image */}
                 <div className="absolute inset-0 bg-gradient-to-br from-dark-100 to-dark-200 flex items-center justify-center">
                   <span className="text-gray-500 text-lg">Photo Here</span>
-                  {/* In real app: */}
-                  {/* <Image
-                    src="/images/about-photo.jpg"
-                    alt="About Me"
-                    fill
-                    className="object-cover"
-                  /> */}
                 </div>
 
                 {/* Overlay Gradient */}
@@ -150,53 +138,34 @@ export default function AboutSection({ translations }: AboutSectionProps) {
               />
               <h2 className="text-4xl md:text-5xl font-bold mb-2">
                 <span className="bg-gradient-to-r from-white to-ocean-200 bg-clip-text text-transparent">
-                  {translations.title}
+                  {t('title')}
                 </span>
               </h2>
             </div>
 
             <div className="space-y-4 text-gray-300 text-base md:text-lg leading-relaxed">
-              <p>
-                Hi! I'm <span className="text-ocean-400 font-semibold">Ipanzx</span>, 
-                a passionate Full Stack Developer and Web3 enthusiast with over 10 years of experience 
-                in building innovative digital solutions.
-              </p>
-              
-              <p>
-                My journey in tech started with a curiosity about how websites work, and it has evolved 
-                into a deep expertise in modern web technologies, blockchain development, and creating 
-                scalable applications that make a difference.
-              </p>
-
-              <p>
-                I specialize in building full-stack applications using React, Next.js, Node.js, and 
-                TypeScript. I'm also deeply involved in the Web3 space, working with Solidity, smart 
-                contracts, and decentralized applications (dApps).
-              </p>
-
-              <p>
-                When I'm not coding, you'll find me exploring new technologies, contributing to 
-                open-source projects, or sharing knowledge with the developer community through 
-                technical articles and mentorship.
-              </p>
+              <p dangerouslySetInnerHTML={{ __html: t('content.p1') }} />
+              <p>{t('content.p2')}</p>
+              <p>{t('content.p3')}</p>
+              <p>{t('content.p4')}</p>
 
               {/* Skills Highlights */}
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="p-4 rounded-lg bg-gradient-to-br from-ocean-500/10 to-ocean-700/10 border border-ocean-500/20">
                   <div className="text-3xl font-bold text-ocean-400 mb-1">10+</div>
-                  <div className="text-sm text-gray-400">Years Experience</div>
+                  <div className="text-sm text-gray-400">{t('stats.exp')}</div>
                 </div>
                 <div className="p-4 rounded-lg bg-gradient-to-br from-ocean-500/10 to-ocean-700/10 border border-ocean-500/20">
                   <div className="text-3xl font-bold text-ocean-400 mb-1">50+</div>
-                  <div className="text-sm text-gray-400">Projects Completed</div>
+                  <div className="text-sm text-gray-400">{t('stats.projects')}</div>
                 </div>
                 <div className="p-4 rounded-lg bg-gradient-to-br from-ocean-500/10 to-ocean-700/10 border border-ocean-500/20">
                   <div className="text-3xl font-bold text-ocean-400 mb-1">15+</div>
-                  <div className="text-sm text-gray-400">Tech Stacks</div>
+                  <div className="text-sm text-gray-400">{t('stats.stacks')}</div>
                 </div>
                 <div className="p-4 rounded-lg bg-gradient-to-br from-ocean-500/10 to-ocean-700/10 border border-ocean-500/20">
                   <div className="text-3xl font-bold text-ocean-400 mb-1">100%</div>
-                  <div className="text-sm text-gray-400">Dedicated</div>
+                  <div className="text-sm text-gray-400">{t('stats.dedicated')}</div>
                 </div>
               </div>
             </div>

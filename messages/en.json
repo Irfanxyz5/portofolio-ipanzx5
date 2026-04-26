@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "experience": "Experience",
+    "portfolio": "Portfolio",
+    "contact": "Contact Me"
+  },
+  "hero": {
+    "greeting": "👋 Hello, I am",
+    "name": "Ipanzx",
+    "role": "Full Stack & Web3 Developer",
+    "description": "Building innovative digital solutions with modern web technologies and blockchain. Passionate about creating scalable, secure, and user-friendly applications.",
+    "scroll": "Scroll Down"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Learn more about my journey",
+    "content": {
+      "p1": "Hi! I'm <span class=\"text-ocean-400 font-semibold\">Ipanzx</span>, a passionate Full Stack Developer and Web3 enthusiast with over 10 years of experience in building innovative digital solutions.",
+      "p2": "My journey in tech started with a curiosity about how websites work, and it has evolved into a deep expertise in modern web technologies, blockchain development, and creating scalable applications that make a difference.",
+      "p3": "I specialize in building full-stack applications using React, Next.js, Node.js, and TypeScript. I'm also deeply involved in the Web3 space, working with Solidity, smart contracts, and decentralized applications (dApps).",
+      "p4": "When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community through technical articles and mentorship."
+    },
+    "stats": {
+      "exp": "Years Experience",
+      "projects": "Projects Completed",
+      "stacks": "Tech Stacks",
+      "dedicated": "Dedicated"
+    },
+    "bubbles": {
+      "web": "Web Developer",
+      "blockchain": "Blockchain",
+      "fullstack": "Full Stack",
+      "web3": "Web3"
+    }
+  },
+  "experience": {
+    "title": "My Experience",
+    "subtitle": "My journey in tech and education",
+    "footer": "Continuously Learning & Growing",
+    "types": {
+      "work": "Work",
+      "education": "Education",
+      "course": "Course"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Explore my work and skills",
+    "techStack": "Technology Stack",
+    "projects": "My Projects",
+    "certificates": "Certificates",
+    "projectCard": {
+      "featured": "Featured",
+      "code": "Code",
+      "preview": "Preview"
+    },
+    "certificateCard": {
+      "viewCredential": "View Credential",
+      "preview": "Certificate Preview",
+      "fullView": "Full Certificate View"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Feel free to reach out for collaborations or just a friendly chat!",
+    "cta": {
+      "title": "Let's Work Together",
+      "description": "Have a project in mind? Let's discuss how we can work together to bring your ideas to life.",
+      "button": "Send Message"
+    },
+    "footer": "© 2024 Ipanzx. Built with Next.js, TypeScript & Three.js"
+  }
+}

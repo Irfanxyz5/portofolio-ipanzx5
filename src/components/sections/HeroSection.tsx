@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaInstagram, FaTelegram } from 'react-icons/fa';
 import PhotoCard3D from '../three/PhotoCard3D';
 import { SOCIAL_MEDIA } from '@/lib/constants';
+import { useTranslations } from 'next-intl';
 
 const iconMap: { [key: string]: any } = {
   FaGithub,
@@ -13,16 +14,8 @@ const iconMap: { [key: string]: any } = {
   FaTelegram,
 };
 
-interface HeroSectionProps {
-  translations: {
-    greeting: string;
-    name: string;
-    role: string;
-    description: string;
-  };
-}
-
-export default function HeroSection({ translations }: HeroSectionProps) {
+export default function HeroSection() {
+  const t = useTranslations('hero');
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -87,7 +80,7 @@ export default function HeroSection({ translations }: HeroSectionProps) {
           >
             <motion.div variants={itemVariants}>
               <span className="inline-block px-4 py-2 rounded-full bg-ocean-500/20 text-ocean-400 text-sm font-medium mb-6">
-                {translations.greeting}
+                {t('greeting')}
               </span>
             </motion.div>
 
@@ -96,7 +89,7 @@ export default function HeroSection({ translations }: HeroSectionProps) {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
             >
               <span className="bg-gradient-to-r from-white via-ocean-200 to-white bg-clip-text text-transparent">
-                {translations.name}
+                {t('name')}
               </span>
             </motion.h1>
 
@@ -104,14 +97,14 @@ export default function HeroSection({ translations }: HeroSectionProps) {
               variants={itemVariants}
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-ocean-400 mb-6"
             >
-              {translations.role}
+              {t('role')}
             </motion.h2>
 
             <motion.p
               variants={itemVariants}
               className="text-gray-300 text-base sm:text-lg md:text-xl max-w-2xl mb-8 leading-relaxed"
             >
-              {translations.description}
+              {t('description')}
             </motion.p>
 
             {/* Social Media Buttons */}
@@ -153,7 +146,7 @@ export default function HeroSection({ translations }: HeroSectionProps) {
                 }}
                 className="flex flex-col items-center text-ocean-400"
               >
-                <span className="text-sm mb-2">Scroll Down</span>
+                <span className="text-sm mb-2">{t('scroll')}</span>
                 <div className="w-6 h-10 border-2 border-ocean-400 rounded-full flex items-start justify-center p-1">
                   <motion.div
                     animate={{

@@ -5,6 +5,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FaGithub, FaLinkedin, FaInstagram, FaTelegram, FaEnvelope } from 'react-icons/fa';
 import { SOCIAL_MEDIA } from '@/lib/constants';
+import { useTranslations } from 'next-intl';
 
 const iconMap: { [key: string]: any } = {
   FaGithub,
@@ -14,14 +15,8 @@ const iconMap: { [key: string]: any } = {
   FaEnvelope,
 };
 
-interface ContactSectionProps {
-  translations: {
-    title: string;
-    description: string;
-  };
-}
-
-export default function ContactSection({ translations }: ContactSectionProps) {
+export default function ContactSection() {
+  const t = useTranslations('contact');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -74,11 +69,11 @@ export default function ContactSection({ translations }: ContactSectionProps) {
           />
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-white to-ocean-200 bg-clip-text text-transparent">
-              {translations.title}
+              {t('title')}
             </span>
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            {translations.description}
+            {t('description')}
           </p>
         </motion.div>
 
@@ -132,10 +127,10 @@ export default function ContactSection({ translations }: ContactSectionProps) {
           className="bg-gradient-to-br from-dark-100/90 to-dark-200/90 backdrop-blur-sm border border-ocean-500/20 rounded-2xl p-8 shadow-xl"
         >
           <h3 className="text-2xl font-bold text-white mb-4">
-            Let's Work Together
+            {t('cta.title')}
           </h3>
           <p className="text-gray-300 mb-6">
-            Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
+            {t('cta.description')}
           </p>
           <motion.a
             href="mailto:contact@ipanzx.com"
@@ -144,7 +139,7 @@ export default function ContactSection({ translations }: ContactSectionProps) {
             className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-ocean-500 to-ocean-600 text-white font-medium hover:shadow-lg hover:shadow-ocean-500/50 transition-all duration-300"
           >
             <FaEnvelope />
-            <span>Send Message</span>
+            <span>{t('cta.button')}</span>
           </motion.a>
         </motion.div>
 
@@ -156,7 +151,7 @@ export default function ContactSection({ translations }: ContactSectionProps) {
           className="mt-12 pt-8 border-t border-ocean-500/20"
         >
           <p className="text-gray-400 text-sm">
-            © 2024 Ipanzx. Built with Next.js, TypeScript & Three.js
+            {t('footer')}
           </p>
         </motion.div>
       </div>

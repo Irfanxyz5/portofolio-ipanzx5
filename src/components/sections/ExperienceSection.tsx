@@ -5,12 +5,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { experienceData } from '@/data/experience';
 import { HiAcademicCap, HiBriefcase, HiBookOpen } from 'react-icons/hi';
-
-interface ExperienceSectionProps {
-  translations: {
-    title: string;
-  };
-}
+import { useTranslations } from 'next-intl';
 
 const iconMap = {
   education: HiAcademicCap,
@@ -18,7 +13,8 @@ const iconMap = {
   course: HiBookOpen,
 };
 
-export default function ExperienceSection({ translations }: ExperienceSectionProps) {
+export default function ExperienceSection() {
+  const t = useTranslations('experience');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -71,10 +67,10 @@ export default function ExperienceSection({ translations }: ExperienceSectionPro
           />
           <h2 className="text-4xl md:text-5xl font-bold">
             <span className="bg-gradient-to-r from-white to-ocean-200 bg-clip-text text-transparent">
-              {translations.title}
+              {t('title')}
             </span>
           </h2>
-          <p className="mt-4 text-gray-400 text-lg">My journey in tech and education</p>
+          <p className="mt-4 text-gray-400 text-lg">{t('subtitle')}</p>
         </motion.div>
 
         {/* Timeline */}
@@ -123,7 +119,7 @@ export default function ExperienceSection({ translations }: ExperienceSectionPro
                             ? 'bg-purple-500/20 text-purple-400'
                             : 'bg-green-500/20 text-green-400'
                         }`}>
-                          {exp.type === 'work' ? 'Work' : exp.type === 'education' ? 'Education' : 'Course'}
+                          {t(`types.${exp.type}`)}
                         </span>
                         <span className="text-gray-500 text-sm">{exp.period}</span>
                       </div>
@@ -166,7 +162,7 @@ export default function ExperienceSection({ translations }: ExperienceSectionPro
               className="w-2 h-2 rounded-full bg-ocean-400"
             />
             <span className="text-ocean-300 text-sm font-medium">
-              Continuously Learning & Growing
+              {t('footer')}
             </span>
           </div>
         </motion.div>
