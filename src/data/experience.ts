@@ -1,0 +1,68 @@
+// src/data/experience.ts
+import { Experience } from '@/types';
+
+export const experienceData: Experience[] = [
+  {
+    id: 'exp-1',
+    title: 'Senior Full Stack Developer',
+    organization: 'Tech Innovators Inc.',
+    period: '2022 - Present',
+    description: 'Leading development of Web3 applications and DeFi platforms. Building scalable microservices architecture with Node.js and React. Mentoring junior developers and conducting code reviews.',
+    type: 'work',
+    icon: '💼',
+  },
+  {
+    id: 'exp-2',
+    title: 'Blockchain Developer',
+    organization: 'CryptoSolutions',
+    period: '2021 - 2022',
+    description: 'Developed smart contracts using Solidity for Ethereum blockchain. Built NFT marketplace and DeFi protocols. Implemented Web3 integrations with React applications.',
+    type: 'work',
+    icon: '⛓️',
+  },
+  {
+    id: 'exp-3',
+    title: 'Full Stack Developer',
+    organization: 'Digital Agency XYZ',
+    period: '2019 - 2021',
+    description: 'Built and maintained multiple client projects using React, Node.js, and MongoDB. Implemented responsive designs and optimized application performance.',
+    type: 'work',
+    icon: '💻',
+  },
+  {
+    id: 'exp-4',
+    title: 'Web3 Development Bootcamp',
+    organization: 'Blockchain Academy',
+    period: '2021',
+    description: 'Intensive 6-month program covering Solidity, smart contract development, DeFi protocols, and Web3 integration.',
+    type: 'course',
+    icon: '🎓',
+  },
+  {
+    id: 'exp-5',
+    title: 'Advanced React & TypeScript',
+    organization: 'Frontend Masters',
+    period: '2020',
+    description: 'Completed advanced courses on React patterns, TypeScript, state management, and performance optimization.',
+    type: 'course',
+    icon: '📚',
+  },
+  {
+    id: 'exp-6',
+    title: 'Bachelor of Computer Science',
+    organization: 'State University',
+    period: '2015 - 2019',
+    description: 'Graduated with honors. Focus on software engineering, algorithms, and web development. Participated in multiple hackathons and coding competitions.',
+    type: 'education',
+    icon: '🎓',
+  },
+  {
+    id: 'exp-7',
+    title: 'Started Self-Learning Programming',
+    organization: 'Self-Taught',
+    period: '2014',
+    description: 'Began learning HTML, CSS, and JavaScript through online courses and tutorials. Built first personal projects and developed passion for web development.',
+    type: 'education',
+    icon: '🌱',
+  },
+];

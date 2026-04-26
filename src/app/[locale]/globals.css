@@ -1,0 +1,144 @@
+/* src/app/[locale]/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-dark-200 text-white;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-300;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ocean-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-ocean-500;
+  }
+
+  /* Text Selection */
+  ::selection {
+    @apply bg-ocean-500/30 text-white;
+  }
+
+  /* Glassmorphism */
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-ocean-400 to-ocean-600 bg-clip-text text-transparent;
+  }
+
+  /* Card Hover Effect */
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-ocean-500/20;
+  }
+
+  /* Loading Animation */
+  .loading-dots {
+    @apply inline-flex space-x-1;
+  }
+
+  .loading-dots span {
+    @apply w-2 h-2 bg-ocean-400 rounded-full animate-bounce;
+  }
+
+  .loading-dots span:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .loading-dots span:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(64, 169, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(64, 169, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(64, 169, 255, 0.5);
+  }
+}
+
+/* Smooth Transitions */
+a, button {
+  @apply transition-all duration-300;
+}
+
+/* Focus Styles */
+*:focus-visible {
+  @apply outline-none ring-2 ring-ocean-400 ring-offset-2 ring-offset-dark-200;
+}
+
+/* Prevent FOUC */
+html.loading {
+  overflow: hidden;
+}
+
+/* Three.js Canvas Styles */
+canvas {
+  @apply touch-none;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
