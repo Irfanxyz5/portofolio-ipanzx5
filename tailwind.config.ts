@@ -34,6 +34,7 @@ const config: Config = {
           800: '#010203',
           900: '#000000',
         },
+        border: 'rgba(64, 169, 255, 0.2)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
