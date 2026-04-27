@@ -7,18 +7,25 @@ import { PORTFOLIO_TABS } from '@/lib/constants';
 import TechStack from '../portfolio/TechStack';
 import ProjectCard from '../portfolio/ProjectCard';
 import CertificateGallery from '../portfolio/CertificateGallery';
-import { useTranslations } from 'next-intl';
 
-export default function PortfolioSection() {
-  const t = useTranslations('portfolio');
+interface PortfolioSectionProps {
+  translations: {
+    title: string;
+    techStack: string;
+    projects: string;
+    certificates: string;
+  };
+}
+
+export default function PortfolioSection({ translations }: PortfolioSectionProps) {
   const [activeTab, setActiveTab] = useState('techStack');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const tabLabels: { [key: string]: string } = {
-    techStack: t('techStack'),
-    projects: t('projects'),
-    certificates: t('certificates'),
+    techStack: translations.techStack,
+    projects: translations.projects,
+    certificates: translations.certificates,
   };
 
   return (
@@ -51,10 +58,10 @@ export default function PortfolioSection() {
           />
           <h2 className="text-4xl md:text-5xl font-bold">
             <span className="bg-gradient-to-r from-white to-ocean-200 bg-clip-text text-transparent">
-              {t('title')}
+              {translations.title}
             </span>
           </h2>
-          <p className="mt-4 text-gray-400 text-lg">{t('subtitle')}</p>
+          <p className="mt-4 text-gray-400 text-lg">Explore my work and skills</p>
         </motion.div>
 
         {/* Tabs */}

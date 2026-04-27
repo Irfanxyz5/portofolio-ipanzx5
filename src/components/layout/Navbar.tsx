@@ -7,14 +7,19 @@ import { HiMenu, HiX } from 'react-icons/hi';
 import { useRouter, usePathname } from 'next/navigation';
 import { NAVIGATION_ITEMS, LANGUAGES } from '@/lib/constants';
 import { smoothScroll } from '@/lib/utils';
-import { useTranslations } from 'next-intl';
 
 interface NavbarProps {
   currentLocale: string;
+  translations: {
+    home: string;
+    about: string;
+    experience: string;
+    portfolio: string;
+    contact: string;
+  };
 }
 
-export default function Navbar({ currentLocale }: NavbarProps) {
-  const t = useTranslations('nav');
+export default function Navbar({ currentLocale, translations }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -96,7 +101,7 @@ export default function Navbar({ currentLocale }: NavbarProps) {
                       : 'text-gray-300 hover:text-ocean-400 hover:bg-ocean-500/10'
                   }`}
                 >
-                  {t(item.key)}
+                  {translations[item.key as keyof typeof translations]}
                 </motion.button>
               ))}
 
@@ -179,7 +184,7 @@ export default function Navbar({ currentLocale }: NavbarProps) {
                         : 'text-gray-300 hover:text-ocean-400 hover:bg-ocean-500/10'
                     }`}
                   >
-                    {t(item.key)}
+                    {translations[item.key as keyof typeof translations]}
                   </motion.button>
                 ))}
 

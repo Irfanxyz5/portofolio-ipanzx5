@@ -5,10 +5,8 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiX, HiExternalLink } from 'react-icons/hi';
 import { certificatesData } from '@/data/certificates';
-import { useTranslations } from 'next-intl';
 
 export default function CertificateGallery() {
-  const t = useTranslations('portfolio.certificateCard');
   const [selectedCert, setSelectedCert] = useState<typeof certificatesData[0] | null>(null);
 
   return (
@@ -27,7 +25,7 @@ export default function CertificateGallery() {
             <div className="relative aspect-[4/3] bg-gradient-to-br from-dark-100/90 to-dark-200/90 backdrop-blur-sm rounded-xl border border-ocean-500/20 overflow-hidden shadow-xl hover:shadow-ocean-500/30 transition-all duration-300">
               {/* Certificate Image Placeholder */}
               <div className="absolute inset-0 bg-gradient-to-br from-dark-200 to-dark-300 flex items-center justify-center text-gray-600">
-                {t('preview')}
+                Certificate Preview
               </div>
 
               {/* Overlay */}
@@ -79,7 +77,7 @@ export default function CertificateGallery() {
 
               {/* Certificate Image */}
               <div className="relative aspect-[4/3] bg-gradient-to-br from-dark-200 to-dark-300 flex items-center justify-center text-gray-600">
-                {t('fullView')}
+                Full Certificate View
               </div>
 
               {/* Certificate Info */}
@@ -98,7 +96,7 @@ export default function CertificateGallery() {
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-ocean-500 to-ocean-600 text-white hover:shadow-lg hover:shadow-ocean-500/50 transition-all duration-300"
                   >
                     <HiExternalLink />
-                    <span>{t('viewCredential')}</span>
+                    <span>View Credential</span>
                   </a>
                 )}
               </div>

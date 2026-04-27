@@ -5,11 +5,8 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { projectsData } from '@/data/projects';
 import { formatDate } from '@/lib/utils';
-import { useTranslations } from 'next-intl';
 
 export default function ProjectCard() {
-  const t = useTranslations('portfolio.projectCard');
-
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {projectsData.map((project, index) => (
@@ -25,7 +22,7 @@ export default function ProjectCard() {
             {project.featured && (
               <div className="absolute top-4 right-4 z-10">
                 <span className="px-3 py-1 rounded-full bg-gradient-to-r from-ocean-500 to-ocean-600 text-white text-xs font-medium shadow-lg">
-                  {t('featured')}
+                  Featured
                 </span>
               </div>
             )}
@@ -83,7 +80,7 @@ export default function ProjectCard() {
                     className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-dark-200 hover:bg-dark-100 text-gray-300 hover:text-white border border-ocean-500/20 hover:border-ocean-500/40 transition-all duration-300"
                   >
                     <FaGithub />
-                    <span className="text-sm font-medium">{t('code')}</span>
+                    <span className="text-sm font-medium">Code</span>
                   </motion.a>
                 )}
                 {project.liveUrl && (
@@ -96,14 +93,14 @@ export default function ProjectCard() {
                     className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-ocean-500 to-ocean-600 text-white hover:shadow-lg hover:shadow-ocean-500/50 transition-all duration-300"
                   >
                     <FaExternalLinkAlt />
-                    <span className="text-sm font-medium">{t('preview')}</span>
+                    <span className="text-sm font-medium">Preview</span>
                   </motion.a>
                 )}
               </div>
             </div>
 
             {/* Decorative Corner */}
-            <div className="absolute top-0 left-0 w-20 h-20 bg-ocean-500/5 rounded-bl-full" />
+            <div className="absolute top-0 left-0 w-20 h-20 bg-ocean-500/5 rounded-br-full" />
           </div>
         </motion.div>
       ))}
